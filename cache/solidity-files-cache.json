@@ -1,9 +1,48 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
+    "F:\\hardhat\\contracts\\NewRewardsETH.sol": {
+      "lastModificationDate": 1657872975198,
+      "contentHash": "7811455c736566b8b89ec708199c415c",
+      "sourceName": "contracts/NewRewardsETH.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "IERC20",
+        "NewRewardsETH",
+        "Ownable",
+        "ReentrancyGuard",
+        "StakedWrapper"
+      ]
+    },
     "F:\\hardhat\\contracts\\RewardsETH.sol": {
-      "lastModificationDate": 1657861389498,
-      "contentHash": "873929c6382a5461245db17463be40b0",
+      "lastModificationDate": 1657870160660,
+      "contentHash": "8a0efb140a0867672b89043da1d96917",
       "sourceName": "contracts/RewardsETH.sol",
       "solcConfig": {
         "version": "0.8.7",
@@ -77,7 +116,7 @@
       ]
     },
     "F:\\hardhat\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\ERC20.sol": {
-      "lastModificationDate": 1657496867463,
+      "lastModificationDate": 1657867151916,
       "contentHash": "acad756301f0fb200ecc66138e8cd5c5",
       "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
@@ -116,7 +155,7 @@
       ]
     },
     "F:\\hardhat\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
-      "lastModificationDate": 1657496867583,
+      "lastModificationDate": 1657867156116,
       "contentHash": "0eac3e1a83ee62326ca007811285b274",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
@@ -151,7 +190,7 @@
       ]
     },
     "F:\\hardhat\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\IERC20Metadata.sol": {
-      "lastModificationDate": 1657496867578,
+      "lastModificationDate": 1657867156183,
       "contentHash": "aa1be06992a99bb7393b26a6af3c4dfb",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
       "solcConfig": {
@@ -188,7 +227,7 @@
       ]
     },
     "F:\\hardhat\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
-      "lastModificationDate": 1657496868309,
+      "lastModificationDate": 1657867146005,
       "contentHash": "07f148e0d44b2ffc23b3ae6dd6e38cfb",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
