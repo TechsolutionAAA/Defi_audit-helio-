@@ -66,11 +66,10 @@ contract StakedWrapper {
                 totalSupply += msg.value;
                 _balances[forWhom] += msg.value;
             }
-        }
-        else {  
+        } else {  
             require(msg.value == 0, "Zero Eth not allowed");
             require(amount > 0, "Stake should be greater than zero");
-            require(st.transferFrom(msg.sender, address(this), amount),_transferErrorMessage);
+            require(st.transferFrom(msg.sender, address(this), amount), _transferErrorMessage);
             unchecked {
                 totalSupply += amount;
                 _balances[forWhom] += amount;
@@ -89,7 +88,8 @@ contract StakedWrapper {
         IERC20 st = stakedToken;
         if(st == IERC20(address(0))) { //eth
             uint128 val = (amount*buyback)/100;
-            beneficiary.call{value: val}("");
+            payable(beneficiary).transfer(val);
+            // beneficiary.call{value: val}("");
             (bool success_, ) = msg.sender.call{value: amount-val}("");
             require(success_, "eth transfer failure");
         }
