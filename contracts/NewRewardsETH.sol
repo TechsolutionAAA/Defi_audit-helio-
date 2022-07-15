@@ -201,18 +201,17 @@ contract NewRewardsETH is ReentrancyGuard, StakedWrapper, Ownable {
             return uint128(balanceOf(account)*(rewardPerToken()-userRewards[account].userRewardPerTokenPaid)/1e18 + userRewards[account].rewards);
         }
     }
-    function stake(uint128 amount) external payable nonReentrant{
+    function stake(uint128 amount) external payable {
         require(amount < maxStakingAmount, "amount exceed max staking amount");
         stakeFor(msg.sender, amount);
     }
     function stakeFor(address forWhom, uint128 amount) public payable override updateReward(forWhom) nonReentrant{
-        require(amount < maxStakingAmount, "amount exceed max staking amount");
         super.stakeFor(forWhom, amount);
     }
     function withdraw(uint128 amount) public override updateReward(msg.sender) nonReentrant{
         super.withdraw(amount);
     }
-    function exit() external nonReentrant{
+    function exit() external {
         getReward();
         withdraw(uint128(balanceOf(msg.sender)));
     }

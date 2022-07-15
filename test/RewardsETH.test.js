@@ -26,7 +26,7 @@ describe("RewardsETH", function () {
     StToken = await StToken_contract.deploy();
     StToken_instance = await StToken.deployed();
 
-    RewardsETH_contract = await ethers.getContractFactory("RewardsETH");
+    RewardsETH_contract = await ethers.getContractFactory("NewRewardsETH");
     RewardsETH = await RewardsETH_contract.deploy(RdToken_instance.address, StToken_instance.address);
     RewardsETH_instance = await RewardsETH.deployed();
   });

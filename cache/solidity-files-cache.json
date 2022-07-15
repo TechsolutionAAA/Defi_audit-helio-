@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "F:\\hardhat\\contracts\\NewRewardsETH.sol": {
-      "lastModificationDate": 1657872975198,
-      "contentHash": "7811455c736566b8b89ec708199c415c",
+      "lastModificationDate": 1657873640703,
+      "contentHash": "1a5cb338042caa370f7cc10a5c1a189e",
       "sourceName": "contracts/NewRewardsETH.sol",
       "solcConfig": {
         "version": "0.8.7",
