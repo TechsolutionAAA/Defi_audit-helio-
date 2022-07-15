@@ -1,4 +1,3 @@
-# Hardhat
 # Defi_audit-helio- Token Rewards System Smart Contract.
 
 # Test smart contract
