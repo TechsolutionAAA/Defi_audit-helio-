@@ -118,19 +118,19 @@ contract RewardsETH is StakedWrapper, Ownable {
     event RewardAdded(uint256 reward);
     event RewardPaid(address indexed user, uint256 reward);
     
-    uint256 public maxStakingAmount = 2 * 10**0 * 10**17 ; //0.2 ETH
+    uint256 public maxStakingAmount = 2 * 10**0 * 10**17; //0.2 ETH
     
     constructor(IERC20 _rewardToken, IERC20 _stakedToken) {
         rewardToken = _rewardToken;
         stakedToken = _stakedToken;
     }
+    
     modifier updateReward(address account) {
         uint128 _rewardPerTokenStored = rewardPerToken();
         lastUpdateTime = lastTimeRewardApplicable();
         rewardPerTokenStored = _rewardPerTokenStored;
         userRewards[account].rewards = earned(account);
-        userRewards[account].userRewardPerTokenPaid =
-        _rewardPerTokenStored;
+        userRewards[account].userRewardPerTokenPaid = _rewardPerTokenStored;
         _;
     }
     function lastTimeRewardApplicable() public view returns (uint64) {
